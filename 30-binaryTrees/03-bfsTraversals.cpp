@@ -1,5 +1,6 @@
 #include<iostream>
 #include<climits>
+#include<queue>
 using namespace std;
 class Node{
     public:
@@ -45,21 +46,44 @@ void nthLevelOrder(Node* root, int currentLevel, int level){
     nthLevelOrder(root->left, currentLevel+1, level); 
     nthLevelOrder(root->right, currentLevel+1, level);
 }
+void nthLevelOrderRev(Node* root, int currentLevel, int level){ // right se left print krvana ho
+    if(root  == NULL) return;
+    if(currentLevel == level){
+        cout<<root->val<<' '; // root
+        return;
+    }
+     nthLevelOrderRev(root->right, currentLevel+1, level); // right
+    nthLevelOrderRev(root->left, currentLevel+1, level); // left
+}
 void levelOrder(Node* root){
     int n = levels(root); // number of levels in the tree
     for(int i=1; i<=n; i++){
         nthLevelOrder(root, 1, i);
         cout<<endl;
+        nthLevelOrderRev(root,1,i);
+         cout<<endl;
     }
 }
+void levelOrderQueue(Node* root){ // level order traversal using queues || BFS
+    queue<Node*> q;
+    q.push(root);
+    while(q.size()>0){
+        Node* temp = q.front();
+        q.pop();
+        cout<<temp->val<<' ';
+        if(temp->left!=NULL) q.push(temp->left);
+         if(temp->right!=NULL) q.push(temp->right);
+    }
+    cout<<endl;
+}
 int main(){
-    Node* a =new Node(1);
+    Node* a = new Node(1);
     Node* b = new Node(2);
-     Node* c =new Node(3);
+    Node* c = new Node(3);
     Node* d = new Node(4);
-     Node* e =new Node(5);
+    Node* e = new Node(5);
     Node* f = new Node(6);
-     Node* g =new Node(7);
+    Node* g = new Node(7);
  // making the connection or buildind a tree
      a->left = b;
      a->right = c;
@@ -70,5 +94,6 @@ int main(){
      nthLevelOrder(a, 1, 3); // 4 5 6 7
         cout<<endl;
         levelOrder(a); // 1 \n 2 3 \n 4 5 6 7
+        levelOrderQueue(a) ;
 
 } 
