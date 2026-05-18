@@ -14,8 +14,7 @@ void displayrecursively(Node* head){ // for printing the linked list
     if(head == NULL) return; // base case
     cout<<head->val<<" ";
     displayrecursively(head->next); // recursive call for the next node
-}
-
+};
 int main(){
    Node* a = new Node(10);
    Node* b = new Node(20);
