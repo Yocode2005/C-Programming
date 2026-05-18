@@ -6,7 +6,7 @@ class Node{ // class
      Node* next;
      Node(int val){ // constructor
         this->val = val;
-        this->next = NULL;
+        this->next = NULL; // default value of next is NULL for every node when it is created
      }
 };
 int main(){
