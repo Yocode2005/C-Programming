@@ -9,12 +9,22 @@ class Node{ // class
         this->next = NULL;
      }
 };
-void display(Node* head){
+void display(Node* head){ // for printing the linked list
     Node* temp = head;
     while(temp!=NULL){
         cout<<temp->val<<" ";
         temp = temp->next;
     }
+}
+// for size of linked list
+int size(Node* head){
+   Node* temp = head;
+   int n = 0;
+   while(temp!=NULL){
+      n++;
+      temp = temp->next;
+   }
+   return n;
 }
 int main(){
    Node* a = new Node(10);
@@ -33,4 +43,6 @@ int main(){
    // }
 
    display(a);
+   cout<<endl;
+   cout<<"size of linked list is "<<size(a)<<endl;
 }
