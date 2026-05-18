@@ -18,7 +18,7 @@ public:
         head = tail = NULL;
         size = 0;
     }
-    void insertAtEnd(int val){
+    void insertAtTail(int val){
         Node* temp = new Node(val);
         if(size==0) head = tail = temp;
         else{
@@ -27,6 +27,17 @@ public:
         }
         size++;
     }
+
+     void insertAtHead(int val){
+        Node* temp = new Node(val);
+        if(size==0) head = tail = temp;
+        else{
+            temp->next = head;
+            head = temp;
+        }
+        size++;
+    }
+
     void display(){
         Node* temp = head;
         while(temp!=NULL){
@@ -38,9 +49,11 @@ public:
 };
 int main(){
     LinkedList ll ;
-    ll.insertAtEnd(10);
+    ll.insertAtTail(10);
     ll.display();
-    ll.insertAtEnd(20);
+    ll.insertAtTail(20);
+    ll.display();
+    ll.insertAtHead(30);
     ll.display();
     
 }
