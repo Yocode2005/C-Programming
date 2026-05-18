@@ -38,6 +38,31 @@ public:
         size++;
     }
 
+    void insertAtIdx(int idx,int val){
+        if(idx<0 || idx>size){
+            cout<<"Invalid index"<<endl;
+            return;
+        }
+        if(idx == 0){
+            insertAtHead(val);
+            return;
+        }
+        if(idx == size){
+            insertAtTail(val);
+            return;
+        }
+        else{
+            Node* t = new Node(val);
+            Node* temp = head;
+            for(int i = 1;i<=idx-1;i++){
+                temp = temp->next;
+            }
+            t->next = temp->next;
+            temp->next = t;
+            size++;
+        }
+    }
+
     void display(){
         Node* temp = head;
         while(temp!=NULL){
