@@ -18,7 +18,7 @@ public:
         head = tail = NULL;
         size = 0;
     }
-    void insertAtTail(int val){
+    void insertAtTail(int val){ // for inserting at end of linked list
         Node* temp = new Node(val);
         if(size==0) head = tail = temp;
         else{
@@ -28,7 +28,7 @@ public:
         size++;
     }
 
-     void insertAtHead(int val){
+     void insertAtHead(int val){ // for inserting at head of linked list
         Node* temp = new Node(val);
         if(size==0) head = tail = temp;
         else{
@@ -38,7 +38,7 @@ public:
         size++;
     }
 
-    void insertAtIdx(int idx,int val){
+     void insertAtIdx(int idx,int val){ // for inserting at a specific index
         if(idx<0 || idx>size){
             cout<<"Invalid index"<<endl;
             return;
@@ -63,7 +63,7 @@ public:
         }
     }
 
-    int getAtIdx(int idx){
+    int getAtIdx(int idx){ // for getting the value at a specific index
         if(idx<0 || idx>=size){
             cout<<"Invalid index"<<endl;
             return -1;
@@ -77,13 +77,13 @@ public:
         return temp->val;   
     }
 
-    void deleteAtHead(){
+    void deleteAtHead(){ // for deleting the head of linked list
         if(size == 0) return;
         head = head->next;
         size--;
     }
 
-     void deleteAtTail(){
+     void deleteAtTail(){ // for deleting the tail of linked list
         if(size == 0) return;
         if(size == 1){
             head = tail = NULL;
@@ -99,7 +99,7 @@ public:
         size--;
     }
 
-    void deleteAtIdx(int idx){
+    void deleteAtIdx(int idx){ // for deleting at a specific index
         if(idx<0 || idx>=size){
             cout<<"Invalid index"<<endl;
             return;
@@ -120,7 +120,7 @@ public:
         size--;
     }
 
-    void display(){
+    void display(){ // for displaying the linked list   
         Node* temp = head;
         while(temp!=NULL){
             cout<<temp->val<<" ";
