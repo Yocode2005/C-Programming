@@ -77,6 +77,14 @@ public:
         return temp->val;   
     }
 
+    void deleteAtHead(){
+        if(size == 0) return;
+        head = head->next;
+        size--;
+    }
+
+     
+
     void display(){
         Node* temp = head;
         while(temp!=NULL){
@@ -99,6 +107,8 @@ int main(){
     ll.insertAtIdx(2, 100);
     ll.display();
     cout<<ll.getAtIdx(2)<<endl;
+    ll.deleteAtHead();
+    ll.display();
 
     
 }
