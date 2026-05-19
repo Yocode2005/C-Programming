@@ -98,6 +98,28 @@ public:
         tail = temp;
         size--;
     }
+
+    void deleteAtIdx(int idx){
+        if(idx<0 || idx>=size){
+            cout<<"Invalid index"<<endl;
+            return;
+        }
+        if(idx == 0){
+            deleteAtHead();
+            return;
+        }
+        if(idx == size-1){
+            deleteAtTail();
+            return;
+        }
+        Node* temp = head;
+        for(int i = 1;i<=idx-1;i++){
+            temp = temp->next;
+        }
+        temp->next = temp->next->next;
+        size--;
+    }
+
     void display(){
         Node* temp = head;
         while(temp!=NULL){
@@ -124,6 +146,6 @@ int main(){
     ll.display();// 40 100 30 10 20
     ll.deleteAtTail();
     ll.display(); // 40 100 30 10
-
-    
+    ll.deleteAtIdx(2);
+    ll.display(); // 40 100 10
 }
