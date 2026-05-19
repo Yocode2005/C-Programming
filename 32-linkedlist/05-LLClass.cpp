@@ -97,18 +97,18 @@ public:
 int main(){
     LinkedList ll ;
     ll.insertAtTail(10);
-    ll.display();
+    ll.display(); // 10
     ll.insertAtTail(20);
-    ll.display();
+    ll.display(); // 10 20
     ll.insertAtHead(30);
     ll.insertAtHead(40);
     ll.insertAtHead(50);
-    ll.display();
+    ll.display(); // 50 40 30 10 20
     ll.insertAtIdx(2, 100);
-    ll.display();
-    cout<<ll.getAtIdx(2)<<endl;
+    ll.display(); // 50 40 100 30 10 20
+    cout<<ll.getAtIdx(2)<<endl; // 100
     ll.deleteAtHead();
-    ll.display();
+    ll.display();// 40 100 30 10 20
 
     
 }
