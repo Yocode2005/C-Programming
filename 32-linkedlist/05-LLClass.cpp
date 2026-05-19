@@ -79,6 +79,10 @@ int main(){
     ll.insertAtTail(20);
     ll.display();
     ll.insertAtHead(30);
+    ll.insertAtHead(40);
+    ll.insertAtHead(50);
+    ll.display();
+    ll.insertAtIdx(2, 100);
     ll.display();
     
 }
