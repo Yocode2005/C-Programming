@@ -83,8 +83,21 @@ public:
         size--;
     }
 
-     
-
+     void deleteAtTail(){
+        if(size == 0) return;
+        if(size == 1){
+            head = tail = NULL;
+            size--;
+            return;
+        }
+        Node* temp = head;
+        while(temp->next!=tail){
+            temp = temp->next;
+        }
+        temp->next = NULL;
+        tail = temp;
+        size--;
+    }
     void display(){
         Node* temp = head;
         while(temp!=NULL){
@@ -109,6 +122,8 @@ int main(){
     cout<<ll.getAtIdx(2)<<endl; // 100
     ll.deleteAtHead();
     ll.display();// 40 100 30 10 20
+    ll.deleteAtTail();
+    ll.display(); // 40 100 30 10
 
     
 }
