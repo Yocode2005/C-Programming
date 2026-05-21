@@ -148,10 +148,10 @@ int main(){
     dl.insertAtIdx(3, 25);
     dl.display();
     // cout<<"Value at index 3 is "<<dl.getAtIdx(3)<<endl;
-    // dl.deleteAtHead();
-    // dl.display();
+     dl.deleteAtHead();
+     dl.display();
     // dl.deleteAtTail();
     // dl.display();
     // dl.deleteAtIdx(2);
-    // dl.display();
+    // dl.display();  
 }
