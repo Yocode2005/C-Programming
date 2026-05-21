@@ -124,6 +124,8 @@ public:
             temp = temp->next;
         }
         temp->next = temp->next->next;
+        temp->next->prev = temp; 
+        temp = temp->next;
         size--;
     }
 
@@ -153,6 +155,6 @@ int main(){
      dl.display();
     dl.deleteAtTail();
     dl.display();
-    // dl.deleteAtIdx(2);
-    // dl.display();  
+    dl.deleteAtIdx(2);
+    dl.display();  
 }
