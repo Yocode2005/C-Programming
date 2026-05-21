@@ -86,6 +86,8 @@ public:
     void deleteAtHead(){ // for deleting the head of linked list
         if(size == 0) return;
         head = head->next;
+        if(head != NULL) head->prev = NULL;
+        if(head == NULL) tail = NULL;
         size--;
     }
 
@@ -102,6 +104,7 @@ public:
         }
         temp->next = NULL;
         tail = temp;
+        tail->prev = NULL; 
         size--;
     }
 
