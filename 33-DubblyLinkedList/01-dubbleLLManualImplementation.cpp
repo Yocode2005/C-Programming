@@ -19,6 +19,14 @@ void display(Node* head){
     }
     cout<<endl;
 }
+void displayRev(Node* tail){
+    Node* temp = tail;
+    while(temp != NULL){
+        cout<<temp->val<<" ";
+        temp = temp->prev;
+    }
+    cout<<endl;
+}
 int main(){
     Node*a = new Node(10);
     Node*b = new Node(20);
@@ -36,4 +44,5 @@ int main(){
     d->prev = c;
     e->prev = d;
     display(a);
+    displayRev(e);
 }
