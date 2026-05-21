@@ -92,19 +92,17 @@ public:
     }
 
      void deleteAtTail(){ // for deleting the tail of linked list
-        if(size == 0) return;
-        if(size == 1){
-            head = tail = NULL;
-            size--;
+        if(size == 0){
+            cout<<"List is empty"<<endl;
             return;
         }
-        Node* temp = head;
-        while(temp->next!=tail){
-            temp = temp->next;
+        if(size == 1){
+            deleteAtHead();
+            return;
         }
+        Node* temp = tail->prev;
         temp->next = NULL;
         tail = temp;
-        tail->prev = NULL; 
         size--;
     }
 
@@ -153,8 +151,8 @@ int main(){
     // cout<<"Value at index 3 is "<<dl.getAtIdx(3)<<endl;
      dl.deleteAtHead();
      dl.display();
-    // dl.deleteAtTail();
-    // dl.display();
+    dl.deleteAtTail();
+    dl.display();
     // dl.deleteAtIdx(2);
     // dl.display();  
 }
