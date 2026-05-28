@@ -91,9 +91,9 @@ int main(){
      b->right = e;
      c->left = f;
      c->right = g;
-     nthLevelOrder(a, 1, 3); // 4 5 6 7
+    // nthLevelOrder(a, 1, 3); // 4 5 6 7
         cout<<endl;
-        levelOrder(a); // 1 \n 2 3 \n 4 5 6 7
-        levelOrderQueue(a) ;
+         levelOrder(a); // 1 \n 2 3 \n 4 5 6 7
+        // levelOrderQueue(a) ;
 
 } 
