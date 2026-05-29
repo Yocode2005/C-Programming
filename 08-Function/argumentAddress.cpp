@@ -2,7 +2,7 @@
 using namespace std;
 void fun(int x, int y){
     cout<<"address of fun x is "<<&x<<endl;
-    cout<<"address of fun y is "<<&y<<endl;
+    cout<<"address of fun y is "<<&y<<endl<<endl;
 }
 int main(){
     int x = 3;
