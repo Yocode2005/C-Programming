@@ -12,6 +12,6 @@ int main(){
             }
             else cout<<" ";
         }
-        cout<<endl;
+        cout<<endl<<endl;
     }
 }
