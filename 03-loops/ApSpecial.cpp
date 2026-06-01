@@ -22,7 +22,7 @@ int main(){
     // }
     // methos-4
     for(int a = 100;a>0;a = a- 3){
-        cout<<a<<endl;
+        cout<<a<<endl<<endl;
     }
 // sabhi code same work karenge
 }
