@@ -15,6 +15,6 @@ int main(){
         for(int j=1;j<=m;j++){// number of columns or number of stars ke liye use kiya
             cout<<"*";
         }
-        cout<<endl;
+        cout<<endl<<endl;
     }
 }

@@ -6,7 +6,7 @@ int main(){
     cin>>n;
      // by using formula of AP
     for(int i=1;i<=(2*n-1);i+=2){
-         cout<<i<<endl;
+         cout<<i<<endl<<endl;
      }
     // by introducing extra variable
     // int a = 4;

@@ -9,7 +9,7 @@ int main(){
     // new variable introduce krenge or usse hi print krvaynge
     int a = 2;
     for(int i=1;i<=n;i++){
-        cout<<a<<endl;
+        cout<<a<<endl<<endl;
         a = a*3;
     }
 }
