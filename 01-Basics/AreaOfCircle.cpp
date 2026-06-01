@@ -10,7 +10,7 @@ int main(){
     cin>>radius;
     float area = 3.1415*radius*radius;
     cout<<"area is :" ;
-    cout<<area<<endl<<endl;
+    cout<<area<<endl;
 
 
 }
