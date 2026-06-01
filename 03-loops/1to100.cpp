@@ -6,6 +6,6 @@ int main(){
     // }
     //sirf even number hi print kro
     for(int i=1;i<=100;i++){
-        if(i%2==0) cout<<i<<endl;
+        if(i%2==0) cout<<i<<endl<<endl;
     }
 }
