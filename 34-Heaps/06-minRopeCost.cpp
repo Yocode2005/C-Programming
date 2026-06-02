@@ -1,4 +1,4 @@
-
+// find the minimum cost of connecting n ropes of different lengths. The cost of connecting two ropes is equal to the sum of their lengths. We need to connect the ropes with minimum cost.
 
 #include<iostream>
 #include<queue>
