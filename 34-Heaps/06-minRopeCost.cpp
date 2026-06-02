@@ -19,5 +19,5 @@ int main(){
     pq.push(x+y);
     minCost += (x+y);
    }
-   cout<<minCost<<endl;
+   cout<<minCost<<endl<<endl;
 }
