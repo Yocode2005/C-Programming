@@ -11,4 +11,7 @@ int main(){
 
     cout<<"size of heap is : "<<maxHeap.size()<<endl; // size of heap is : 5
     cout<<"top element is : "<<maxHeap.top()<<endl; // top element is : 5//  always return the maximum element in the heap
+    maxHeap.pop(); // remove the top element from the heap
+    cout<<"size of heap is : "<<maxHeap.size()<<endl; // size of heap is : 4
+    cout<<"top element is : "<<maxHeap.top()<<endl; // top element is : 4
 }
