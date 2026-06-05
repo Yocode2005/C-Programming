@@ -52,6 +52,12 @@ class MinHeap{
         return idx-1;
     }
 
+    void display(){
+        for(int i=1;i<idx;i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
 };
 int main(){
     MinHeap pq;
@@ -60,8 +66,10 @@ int main(){
     pq.push(14);
     pq.push(11);
     pq.push(1); 
+    pq.display();
     cout<<pq.top()<<endl;
     cout<<pq.size()<<endl;
     pq.pop();
     cout<<pq.top()<<endl;
+    pq.display();
 }
