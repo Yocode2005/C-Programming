@@ -25,9 +25,33 @@ class MinHeap{
         }
         idx++;
     }
+    void pop(){
+        idx--;
+        arr[1] = arr[idx];
+        int i = 1;
+        while(true){
+            int left = 2*i;
+            int right = 2*i + 1;
+            int smallest = i;
+            if(left<idx && arr[left]<arr[smallest]){
+                smallest = left;
+            }
+            if(right<idx && arr[right]<arr[smallest]){
+                smallest = right;
+            }
+            if(smallest != i){
+                swap(arr[i],arr[smallest]);
+                i = smallest;
+            }
+            else{
+                break;
+            }
+        }
+    }
     int size(){
         return idx-1;
     }
+
 };
 int main(){
     MinHeap pq;
@@ -38,4 +62,6 @@ int main(){
     pq.push(1); 
     cout<<pq.top()<<endl;
     cout<<pq.size()<<endl;
+    pq.pop();
+    cout<<pq.top()<<endl;
 }
