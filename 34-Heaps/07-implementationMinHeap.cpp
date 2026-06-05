@@ -25,6 +25,9 @@ class MinHeap{
         }
         idx++;
     }
+    int size(){
+        return idx-1;
+    }
 };
 int main(){
     MinHeap pq;
@@ -34,4 +37,5 @@ int main(){
     pq.push(11);
     pq.push(1); 
     cout<<pq.top()<<endl;
+    cout<<pq.size()<<endl;
 }
