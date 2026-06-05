@@ -29,8 +29,9 @@ class MinHeap{
 int main(){
     MinHeap pq;
     pq.push(10);
-    pq.push(20);
+    pq.push(2);
+    pq.push(14);
     pq.push(11);
-    pq.push(9);
+    pq.push(1); 
     cout<<pq.top()<<endl;
 }
