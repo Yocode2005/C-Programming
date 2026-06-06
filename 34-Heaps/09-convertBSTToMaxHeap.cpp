@@ -1,43 +1,55 @@
-#include<iostream>
-#include<vector>
-#include<queue>
+#include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
-class Node{
+
+class Node {
 public:
     int val;
     Node* left;
     Node* right;
-    Node(int val){
+
+    Node(int val) {
         this->val = val;
+        left = NULL;
+        right = NULL;
     }
 };
-void inorder(Node* root,vector<int> &arr){
-    if(root == NULL){
-        return;
-    }
-    inorder(root->right,arr);
+
+void inorder(Node* root, vector<int>& arr) {
+    if (root == NULL) return;
+
+    inorder(root->right, arr); // reverse inorder
     arr.push_back(root->val);
-    inorder(root->left,arr);
+    inorder(root->left, arr);
 }
-void preorder(Node* root, vector<int>&arr, int & i){
-    if(root == NULL) return;
+
+void preorder(Node* root, vector<int>& arr, int& i) {
+    if (root == NULL) return;
+
     root->val = arr[i++];
-    preorder(root->right,arr,i);
-    preorder(root->left,arr,i);
+    preorder(root->right, arr, i);
+    preorder(root->left, arr, i);
 }
-void levelOrderQueue(Node* root){
-    if(root == NULL) return;
+
+void levelOrderQueue(Node* root) {
+    if (root == NULL) return;
+
     queue<Node*> q;
     q.push(root);
-    while(!q.empty()){
+
+    while (!q.empty()) {
         Node* temp = q.front();
         q.pop();
-        cout<<temp->val<<" ";
-        if(temp->left) q.push(temp->left);
-        if(temp->right) q.push(temp->right);
+
+        cout << temp->val << " ";
+
+        if (temp->left) q.push(temp->left);
+        if (temp->right) q.push(temp->right);
     }
-};
-int main(){
+}
+
+int main() {
     Node* a = new Node(10);
     Node* b = new Node(5);
     Node* c = new Node(16);
@@ -45,13 +57,30 @@ int main(){
     Node* e = new Node(8);
     Node* f = new Node(12);
     Node* g = new Node(20);
-    a->left = b; a->right = c;
-    b->left = d; b->right = e;
-    c->left = f; c->right = g;
+
+    a->left = b;
+    a->right = c;
+
+    b->left = d;
+    b->right = e;
+
+    c->left = f;
+    c->right = g;
+
     vector<int> arr;
-    inorder(a,arr);
+
+    inorder(a, arr);
+
+    cout << "Original BST (Level Order): ";
     levelOrderQueue(a);
-    int i=0;
-    preorder(a,arr,i);
+    cout << endl;
+
+    int i = 0;
+    preorder(a, arr, i);
+
+    cout << "Max Heap (Level Order): ";
     levelOrderQueue(a);
+    cout << endl;
+
+    return 0;
 }
