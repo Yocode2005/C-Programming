@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-    string s = "yogesh";
+    string s = "yogeshkumarmeena";
     int count = 0;
     int i = 0;
     while(s[i]!='\0'){
