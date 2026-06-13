@@ -10,7 +10,7 @@ int main(){
     float p,r,t;
     cout<<"enter the principle : ";
     cin>>p;
-    cout<<"enter the rate : ";
+    cout<<"enter the rate: ";
     cin>>r;
     cout<<"enter the time : ";
     cin>>t;
