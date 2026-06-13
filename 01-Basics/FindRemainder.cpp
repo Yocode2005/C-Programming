@@ -6,6 +6,6 @@ int main(){
     // int q = a/b; // q is quotient
     // int r = a - (b*q);
     int r = a % b; // remainder when a is dividend by b
-    cout<<r;
+    cout<<r<<endl;
 
 }
