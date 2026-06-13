@@ -6,7 +6,7 @@ int main(){
      int x=5;
      cout<<x<<endl<<endl;
      cout<<++x<<endl<<endl;
-     cout<<x<<endl;
+     cout<<x<<endl<<endl;
     
     
 }   
