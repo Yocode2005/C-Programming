@@ -6,7 +6,7 @@
 using namespace std;
 int main(){
     int n;
-    cout<<"enter the number of rows : ";
+    cout<<"enter the number of rows: ";
     cin>>n;
     // 2n-1 satrs
     for(int i=1;i<=2*n-1;i++){
