@@ -21,6 +21,6 @@ int main(){
             if(k==1) k = 0;
             else k = 1;
         }
-        cout<<endl;
+        cout<<endl<<endl;
     }
 }
