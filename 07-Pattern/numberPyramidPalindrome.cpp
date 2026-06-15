@@ -14,7 +14,7 @@ int main(){
         for(int k =1;k>=1;k--){
             cout<<k;
         }
-        cout<<endl;
+        cout<<endl<<endl;
     }
 
 }
