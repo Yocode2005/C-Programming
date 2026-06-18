@@ -27,7 +27,6 @@ int  main(){
     // for(int  i = 1;i<=n;i++){
     //     cout<<"*"<<" ";
     // }
-
      int m, n; 
 cout<<"enter the number of rows : ";
 cin>>m;
