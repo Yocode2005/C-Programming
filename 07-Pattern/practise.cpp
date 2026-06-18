@@ -2,7 +2,7 @@
 using namespace std;
 int main() { 
 int n; 
-cout<<"enter the numebr of lines : ";
+cout<<"enter the numebr of lines: ";
 cin >> n; 
 char ch =  'A';
 for(int i=1;i<=n;i++){
