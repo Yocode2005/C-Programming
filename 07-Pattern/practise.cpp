@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main() { 
-int n; 
+int n ; 
 cout<<"enter the numebr of lines: ";
 cin >> n; 
 char ch =  'A';
